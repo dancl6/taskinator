@@ -1,3 +1,5 @@
+var pageContentEl = document.querySelector("#page-content");
+
 var taskIdCounter = 0;
 
 console.dir(window.document);
@@ -101,5 +103,10 @@ var createTaskActions = function(taskId) {
 
     return actionContainerEl;
 }
+var taskButtonHandler = function(event) {
+    console.log(event.target);
+};
 
 formEl.addEventListener("submit", taskFormHandler);
+debugger;
+pageContentEl.addEventListener("click", taskButtonHandler);
